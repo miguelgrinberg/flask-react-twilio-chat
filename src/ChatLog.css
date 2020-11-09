@@ -1,0 +1,7 @@
+#chat-content {
+  overflow: auto;
+  height: auto;
+  margin: 5px;
+  flex: 1;
+  margin-bottom: 30px;
+}

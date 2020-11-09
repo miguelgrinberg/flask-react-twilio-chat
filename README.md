@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+# flask-react-twilio-chat
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a chat application based on the Twilio Conversations API and built with a Flask back end and a React front end.
 
-## Available Scripts
+![Chat Screenshot](screenshot.png)
 
-In the project directory, you can run:
+## Installation Instructions
 
-### `yarn start`
+To install the application on your system follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. [Create a Twilio account](https://www.twilio.com/referral/7fB3Je) (if you don't have one yet). It's free!
+2. [Generate an API Key](https://www.twilio.com/console/project/api-keys) for your account.
+3. Clone this repository.
+4. Run `npm install` to install the front end dependencies.
+5. Change to the *api* sub-directory. Create a virtualenv with the name *venv* and install the requirements.
+6. Still in the *api* sub-directory, create a *.env* file by copying the *.env.template* file. Fill out the values for your Twilio account's SID, Auth Token, API Key SID and API Key Secret.
+7. Create one or more chatrooms by running the command `flask chatrooms create "name"`. Use `flask chatrooms list` to see the list of channels that have been created, and `flask chatrooms delete "name"` to remove a channel. 
+8. Back in the top-level directory, execute `yarn start-api` to start the API server.
+9. In a second terminal window, run `yarn start` to start the React server.
+10. Navigate to *http://localhost:3000* on your web browser. Pick a username and log in. The app does not do password validation, so any name will be accepted.

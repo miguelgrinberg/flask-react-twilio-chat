@@ -1,0 +1,18 @@
+#chat-input {
+  margin-top: 10px;
+  padding-top: 5px;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 100%;
+}
+
+#chat-input div:first-child {
+  width: 20%;
+  margin: 5px;
+}
+
+#chat-input input {
+  flex: 1;
+}
